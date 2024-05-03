@@ -1,0 +1,128 @@
+@startuml
+'https://plantuml.com/object-diagram
+left to right direction
+
+object "<u>characterH:Character</u>" as characterH{
+character = "H"
+}
+object "<u>characterE:Character</u>" as characterE{
+character = "e"
+}
+object "<u>characterL:Character</u>" as characterL{
+character = "l"
+}
+object "<u>characterL1:Character</u>" as characterL1{
+character = "l"
+}
+object "<u>characterO:Character</u>" as characterO{
+character = "o"
+}
+object "<u>characterW:Character</u>" as characterW{
+character = "W"
+}
+object "<u>characterO1:Character</u>" as characterO1{
+character = "o"
+}
+object "<u>characterR:Character</u>" as characterR{
+character = "r"
+}
+object "<u>characterL2:Character</u>" as characterL2{
+character = "l"
+}
+object "<u>characterD:Character</u>" as characterD{
+character = "d"
+}
+object "<u>characterC:Character</u>" as characterC{
+character = "C"
+}
+object "<u>characterS:Character</u>" as characterS{
+character = "S"
+}
+object "<u>character5:Character</u>" as character5{
+character = "5"
+}
+object "<u>character8:Character</u>" as character8{
+character = "8"
+}
+object "<u>character0:Character</u>" as character0{
+character = "0"
+}
+object "<u>character01:Character</u>" as character01{
+character = "0"
+}
+
+object "<u>charProperty1:CharacterProperties</u>" as charProperty1{
+font = "Arial"
+color = "Black"
+size = 16
+}
+
+object "<u>charProperty2:CharacterProperties</u>" as charProperty2{
+font = "Arial"
+color = "Black"
+size = 14
+}
+
+object "<u>charProperty3:CharacterProperties</u>" as charProperty3{
+font = "Verdana"
+color = "Blue"
+size = 18
+}
+
+object "<u>charProperty4:CharacterProperties</u>" as charProperty4{
+font = "Verdana"
+color = "Red"
+size = 12
+}
+
+object "<u>document:Document</u>" as document{
+}
+
+
+
+object "<u>propertiesFactory: CharacterPropertiesFactory</u>" as propertiesFactory{
+}
+
+propertiesFactory --o document
+
+
+propertiesFactory o--  charProperty1
+propertiesFactory o-- charProperty2
+propertiesFactory o-- charProperty3
+propertiesFactory o-- charProperty4
+
+charProperty1 --o characterH
+charProperty2 --o characterE
+charProperty2 --o characterL
+charProperty2 --o characterL1
+charProperty2 --o characterO
+charProperty1 --o characterW
+charProperty2 --o characterO1
+charProperty2 --o characterR
+charProperty2 --o characterL2
+charProperty2 --o characterD
+charProperty3 --o characterC
+charProperty3 --o characterS
+charProperty4 --o character5
+charProperty4 --o character8
+charProperty4 --o character0
+charProperty4 --o character01
+
+ characterH  --o document
+ characterE  --o document
+ characterL  --o document
+ characterL1 --o document
+ characterO  --o document
+ characterW  --o document
+ characterO1 --o document
+ characterR  --o document
+ characterL2 --o document
+ characterD  --o document
+ characterC  --o document
+ characterS  --o document
+ character5  --o document
+ character8  --o document
+ character0  --o document
+ character01 --o document
+
+@enduml
