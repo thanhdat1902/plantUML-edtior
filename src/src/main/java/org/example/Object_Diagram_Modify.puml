@@ -89,14 +89,14 @@ object "<u>document:Document</u>" as document{
 object "<u>propertiesFactory: CharacterPropertiesFactory</u>" as propertiesFactory{
 }
 
-propertiesFactory --o document
+propertiesFactory --* document
 
 
-propertiesFactory o--  charProperty1
-propertiesFactory o-- charProperty2
-propertiesFactory o-- charProperty3
-propertiesFactory o-- charProperty4
-propertiesFactory o-- charProperty5
+propertiesFactory *-- charProperty1
+propertiesFactory *-- charProperty2
+propertiesFactory *-- charProperty3
+propertiesFactory *-- charProperty4
+propertiesFactory *-- charProperty5
 
 charProperty5 --o characterH
 charProperty2 --o characterE
@@ -115,21 +115,21 @@ charProperty4 --o character8
 charProperty4 --o character0
 charProperty4 --o character01
 
- characterH  --o document
- characterE  --o document
- characterL  --o document
- characterL1 --o document
- characterO  --o document
- characterW  --o document
- characterO1 --o document
- characterR  --o document
- characterL2 --o document
- characterD  --o document
- characterC  --o document
- characterS  --o document
- character5  --o document
- character8  --o document
- character0  --o document
- character01 --o document
+ characterH  --* document
+ characterE  --* document
+ characterL  --* document
+ characterL1 --* document
+ characterO  --* document
+ characterW  --* document
+ characterO1 --* document
+ characterR  --* document
+ characterL2 --* document
+ characterD  --* document
+ characterC  --* document
+ characterS  --* document
+ character5  --* document
+ character8  --* document
+ character0  --* document
+ character01 --* document
 
 @enduml

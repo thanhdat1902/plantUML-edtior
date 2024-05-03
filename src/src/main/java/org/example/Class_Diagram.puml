@@ -19,7 +19,8 @@ class Character {
 -character: char
 -characterProperty: CharacterProperties
 
-+Character( character: char, characterProperty: CharacterProperties )
+'Constructor
++Character(character: char, characterProperty: CharacterProperties)
 
 'Getter and setter methods
 +setCharacter(character: char): void
@@ -33,6 +34,10 @@ class Character {
 
 class CharacterPropertiesFactory {
 -flyweights: Map<String, CharacterProperties>
+
+'Constructor
++CharacterPropertiesFactory()
+
 +setAndRetrieveFlyweightCharacterProperties(font: String, color: String, size: int): CharacterProperties
 +sizeOfMap(): int
 }
@@ -40,15 +45,19 @@ class CharacterPropertiesFactory {
 class Document {
 -characters: List<Character>
 -propertiesFactory: CharacterPropertiesFactory
+
+'Constructor
++Document()
+
 +addCharacter(c: char, font: String, color: String, size: int): void
 +editCharacterProperties(index: int, font: String, color: String, size: int): void
 +saveToFile(filename: String): void
 +loadFromFile(filename: String): void
 }
 
-CharacterPropertiesFactory o-- CharacterProperties
+CharacterPropertiesFactory *-- CharacterProperties
 Character o-- CharacterProperties
-Document o-- CharacterPropertiesFactory
-Document o-- Character
+Document *-- CharacterPropertiesFactory
+Document *-- Character
 
 @enduml
